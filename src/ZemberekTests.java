@@ -7,6 +7,11 @@ import java.util.List;
 import java.lang.String;
 
 public class ZemberekTests {
+			  public void heceler(){
+				  
+				  return;
+			  }
+	
               public static void main(String[] args){
 			      Scanner m=new Scanner(System.in);
 			      Zemberek z = new Zemberek(new TurkiyeTurkcesi());
