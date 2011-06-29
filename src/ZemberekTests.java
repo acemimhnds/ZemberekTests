@@ -1,11 +1,10 @@
+import java.util.Arrays;
+import java.util.List;
+import java.util.Scanner;
+
 import net.zemberek.erisim.Zemberek;
 import net.zemberek.tr.yapi.TurkiyeTurkcesi;
 import net.zemberek.yapi.Kelime;
-import java.util.Scanner;
-import java.util.Arrays;
-import java.util.List;
-import java.io.UnsupportedEncodingException;
-import java.lang.String;
 
 public class ZemberekTests {
 
@@ -24,7 +23,7 @@ public class ZemberekTests {
 
 	public static void asciDonustur(String k, Zemberek z) {
 		String l = z.asciiyeDonustur(k);
-		System.out.println(">>>Asci ya donusmus hali:");
+		System.out.println(">>>Ascı ya donusmus hali:");
 		System.out.print(l);
 		System.out.println("\n");
 	}
@@ -45,7 +44,7 @@ public class ZemberekTests {
 	public static void kelimeCozumle(String dizi[], Zemberek z) {
 		int d = 0;
 		while (d < dizi.length) {
-			System.out.println(">>>" + dizi[d] + " için cozumlemeler:");
+			System.out.println(">>>" + dizi[d] + " icin cozumlemeler:");
 			Kelime[] cozumler = z.kelimeCozumle(dizi[d]);
 			for (Kelime kelime : cozumler) {
 				System.out.println(kelime);
@@ -59,21 +58,20 @@ public class ZemberekTests {
 		int c = 0;
 		while (c < dizi.length) {
 			if (z.kelimeDenetle(dizi[c]))
-				System.out.println(">>>" + dizi[c]
-						+ " kelimesi doğru yazilmis");
+				System.out
+						.println(">>>" + dizi[c] + " kelimesi dogru yazılmıs");
 			else
 				System.out.println(">>>" + dizi[c]
-						+ " kelimesi doğru yazilmamis");
+						+ " kelimesi dogru yazılmamıs");
 			c++;
 		}
 		System.out.println("\n");
 	}
 
-	public static void kelimeAyristir(String dizi[], Zemberek z) {
+	public static void kelimeAyrıstır(String dizi[], Zemberek z) {
 		int h = 0;
 		while (h < dizi.length) {
-			System.out
-					.println(">>>" + dizi[h] + " için ayristirma sonuclari:");
+			System.out.println(">>>" + dizi[h] + " icin ayristirma sonuclari:");
 			List<String[]> ayrisimlar = z.kelimeAyristir(dizi[h]);
 			for (String[] strings : ayrisimlar)
 				System.out.println(Arrays.toString(strings));
@@ -81,11 +79,12 @@ public class ZemberekTests {
 		}
 	}
 
-	public static void main(String[] args) throws UnsupportedEncodingException {
+	public static void main(String[] args) {
 		Scanner m = new Scanner(System.in);
 		Zemberek z = new Zemberek(new TurkiyeTurkcesi());
 		String k;
-		System.out.println("lutfen cumleyi giriniz:");
+
+		System.out.println("lütfen cümleyi giriniz:");
 		k = m.nextLine();
 		String dizi[] = null;
 		dizi = k.split(" ");
@@ -94,6 +93,6 @@ public class ZemberekTests {
 		oneriler(dizi, z);
 		kelimeDenetle(dizi, z);
 		kelimeCozumle(dizi, z);
-		kelimeAyristir(dizi, z);
+		kelimeAyrıstır(dizi, z);
 	}
 }
