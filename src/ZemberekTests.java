@@ -81,7 +81,7 @@ public class ZemberekTests {
 		}
 	}
 
-	public static void main(String[] args) throws UnsupportedEncodingException {
+	public static void main(String[] args) {
 		Scanner m = new Scanner(System.in);
 		Zemberek z = new Zemberek(new TurkiyeTurkcesi());
 		String k;
