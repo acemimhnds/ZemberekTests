@@ -102,7 +102,7 @@ public class ZemberekTests {
         }
         String dizi2[] = null;
         dizi2 = s.split(" ");
-        System.out.println("İşlem yapılacak  cümle:" + s);
+        System.out.println("İslem yapilacak  cumle:" + s);
         heceler(s, dizi2, z);
         asciDonustur(s, z);
         oneriler(dizi2, z);
@@ -111,7 +111,7 @@ public class ZemberekTests {
         kelimeAyristir(dizi2, z);
     }
 
-    public static void kullanıcıdanAl() {
+    public static void kullanicidanAl() {
         Zemberek z = new Zemberek(new TurkiyeTurkcesi());
         Scanner m = new Scanner(System.in);
         String k;
@@ -119,7 +119,7 @@ public class ZemberekTests {
         k = m.nextLine();
         String dizi[] = null;
         dizi = k.split(" ");
-        System.out.println(dizi);
+        System.out.println("İslem yapilacak  cumle:" + k);
         heceler(k, dizi, z);
         asciDonustur(k, z);
         oneriler(dizi, z);
@@ -132,13 +132,13 @@ public class ZemberekTests {
     public static void main(String[] args) {
 
         System.out
-                .println("İşlem yapılacak cümleyi kullanıcıdan almak için 1'i ,dosyadan okutmak için 2'yi tuşlayınız.");
+                .println("Islem yapilacak cumleyi kullanicidan almak icin 1'i ,dosyadan okutmak icin 2'yi tuslayiniz.");
         Scanner x = new Scanner(System.in);
        int girdi = x.nextInt();
         if (girdi==2) {
             dosyadanOku();
         } else if(girdi==1)  {
-            kullanıcıdanAl();
+            kullanicidanAl();
 
         }
     }
