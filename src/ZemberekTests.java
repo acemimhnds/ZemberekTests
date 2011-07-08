@@ -109,31 +109,36 @@ public class ZemberekTests {
         int l;
         l = q.nextInt();
         System.out.println("İslem yapilacak  cumle:" + s);
-        if (l == 1) {
+        switch (l) {
+        case 1:
             heceler(s, dizi2, z);
-        }
-        if (l == 2) {
+            break;
+        case 2:
             asciDonustur(s, z);
-        }
-        if (l == 3) {
+            break;
+        case 3:
             kelimeDenetle(dizi2, z);
-        }
-        if (l == 4) {
+            break;
+        case 4:
             kelimeCozumle(dizi2, z);
-        }
-        if (l == 5) {
+            break;
+        case 5:
             kelimeAyristir(dizi2, z);
-        } else if (l == 6) {
+            break;
+        case 6:
             oneriler(dizi2, z);
-        } else if (l == 7) {
+            break;
+        case 7:
             heceler(s, dizi2, z);
             asciDonustur(s, z);
             oneriler(dizi2, z);
             kelimeDenetle(dizi2, z);
             kelimeCozumle(dizi2, z);
             kelimeAyristir(dizi2, z);
+            break;
+
         }
-        
+
     }
 
     public static void kullanicidanAl() {
@@ -151,31 +156,35 @@ public class ZemberekTests {
         int l;
         l = v.nextInt();
         System.out.println("İslem yapilacak  cumle:" + k);
-        if (l == 1) {
+        switch (l) {
+        case 1:
             heceler(k, dizi, z);
-        }
-        if (l == 2) {
+            break;
+        case 2:
             asciDonustur(k, z);
-        }
-        if (l == 3) {
+            break;
+        case 3:
             kelimeDenetle(dizi, z);
-        }
-        if (l == 4) {
+            break;
+        case 4:
             kelimeCozumle(dizi, z);
-        }
-        if (l == 5) {
+            break;
+        case 5:
             kelimeAyristir(dizi, z);
-        } else if (l == 6) {
+            break;
+        case 6:
             oneriler(dizi, z);
-        } else if (l == 7) {
+            break;
+        case 7:
             heceler(k, dizi, z);
             asciDonustur(k, z);
             oneriler(dizi, z);
             kelimeDenetle(dizi, z);
             kelimeCozumle(dizi, z);
             kelimeAyristir(dizi, z);
-        }
+            break;
 
+        }
     }
 
     public static void main(String[] args) {
