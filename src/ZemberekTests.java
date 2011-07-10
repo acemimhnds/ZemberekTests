@@ -81,6 +81,39 @@ public class ZemberekTests {
         }
     }
 
+    public static void islemiSec(int l, String k, String dizi[], Zemberek z) {
+        switch (l) {
+        case 1:
+            heceler(k, dizi, z);
+            break;
+        case 2:
+            asciDonustur(k, z);
+            break;
+        case 3:
+            kelimeDenetle(dizi, z);
+            break;
+        case 4:
+            kelimeCozumle(dizi, z);
+            break;
+        case 5:
+            kelimeAyristir(dizi, z);
+            break;
+        case 6:
+            oneriler(dizi, z);
+            break;
+        case 7:
+            heceler(k, dizi, z);
+            asciDonustur(k, z);
+            oneriler(dizi, z);
+            kelimeDenetle(dizi, z);
+            kelimeCozumle(dizi, z);
+            kelimeAyristir(dizi, z);
+            break;
+
+        }
+
+    }
+
     public static void dosyadanOku() {
         Zemberek z = new Zemberek(new TurkiyeTurkcesi());
         Scanner n = new Scanner(System.in);
@@ -109,35 +142,7 @@ public class ZemberekTests {
         int l;
         l = q.nextInt();
         System.out.println("İslem yapilacak  cumle:" + s);
-        switch (l) {
-        case 1:
-            heceler(s, dizi2, z);
-            break;
-        case 2:
-            asciDonustur(s, z);
-            break;
-        case 3:
-            kelimeDenetle(dizi2, z);
-            break;
-        case 4:
-            kelimeCozumle(dizi2, z);
-            break;
-        case 5:
-            kelimeAyristir(dizi2, z);
-            break;
-        case 6:
-            oneriler(dizi2, z);
-            break;
-        case 7:
-            heceler(s, dizi2, z);
-            asciDonustur(s, z);
-            oneriler(dizi2, z);
-            kelimeDenetle(dizi2, z);
-            kelimeCozumle(dizi2, z);
-            kelimeAyristir(dizi2, z);
-            break;
-
-        }
+        islemiSec(l, s, dizi2, z);
 
     }
 
@@ -156,35 +161,7 @@ public class ZemberekTests {
         int l;
         l = v.nextInt();
         System.out.println("İslem yapilacak  cumle:" + k);
-        switch (l) {
-        case 1:
-            heceler(k, dizi, z);
-            break;
-        case 2:
-            asciDonustur(k, z);
-            break;
-        case 3:
-            kelimeDenetle(dizi, z);
-            break;
-        case 4:
-            kelimeCozumle(dizi, z);
-            break;
-        case 5:
-            kelimeAyristir(dizi, z);
-            break;
-        case 6:
-            oneriler(dizi, z);
-            break;
-        case 7:
-            heceler(k, dizi, z);
-            asciDonustur(k, z);
-            oneriler(dizi, z);
-            kelimeDenetle(dizi, z);
-            kelimeCozumle(dizi, z);
-            kelimeAyristir(dizi, z);
-            break;
-
-        }
+        islemiSec(l, k, dizi, z);
     }
 
     public static void main(String[] args) {
